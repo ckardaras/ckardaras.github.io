@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>My Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1 class="mb-5">Add New Article</h1>
+            <form class="form-group" action="mypage.html" method="post">
+                <div class="form-group">
+                    <label class="h4" for="title">Article Title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Title" name="name">
+                </div>
+                <div class="form-group">
+                    <label class="h4" for="name">Author Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-6">
+                        <label class="h4" for="myFile">Upload Files:</label><br>
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                    <div class="col-6">
+                        <label class="h4" for="pages">Pages</label><br>
+                       <select class="custom-select form-control" name="pages">
+                        <option selected>Choose a Selection</option>
+                        <option value="academics">Academics</option>
+                        <option value="journal">Journal</option>
+                        <option value="research">Research</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="h4" for="text">Article Text</label>
+                    <textarea style="height: 300px;" id="text" class="form-control rounded-0"></textarea>
+                </div>
+            <div class="form-row form-group">
+                <div class="col-6">
+                    <label class="h4">Select Tags</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="python" value="python">
+                        <label class="form-check-label" for="python">Python</label>  
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="c++" value="c++">
+                        <label class="form-check-label" for="c++">C++</label>  
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="java" value="java">
+                        <label class="form-check-label" for="java">Java</label>  
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="scala" value="scala">
+                        <label class="form-check-label" for="scala">Scala</label>  
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="perl" value="perl">
+                        <label class="form-check-label" for="perl">Perl</label>  
+                    </div>
+                </div>
+                <div class="col-6">
+                <label class="h4">Visibility</label><br>
+                <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-secondary" for="public">
+                    <input style="width:0px; height: 0px; opacity: 0;" type="radio" name="public" id="public"> Public
+                </label>
+                <label class="btn btn-secondary" for="private">
+                    <input style="width:0px; height: 0px; opacity: 0;" type="radio" name="private" id="private"> Private
+                </label>
+                </div>
+                </div>
+            </div>
+            <div class="form-row form-group">
+            <div class="col-12">
+            <label class="h4" for="username">Login to Finish Submitting</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="col-6">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+                </div>
+            <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label> 
+                
+            </div>
+                <div class="form-group"></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <script>
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+    </body>
+</html>
